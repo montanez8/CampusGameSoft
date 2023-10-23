@@ -1,0 +1,51 @@
+.loader {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #333;
+}
+
+.loader-text {
+    font-size: 36px;
+    font-weight: bold;
+    color: transparent;
+    display: inline-block;
+}
+
+.char {
+    display: inline-block;
+    animation: rainbow 4s linear infinite;
+}
+
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #e74c3c;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: 20px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes rainbow {
+    0% { color: #e74c3c; }
+    14% { color: #f1c40f; }
+    28% { color: #2ecc71; }
+    42% { color: #3498db; }
+    57% { color: #9b59b6; }
+    71% { color: #e74c3c; }
+    85% { color: #f1c40f; }
+    100% { color: #2ecc71; }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.ocultar{
+    display: none;
+}

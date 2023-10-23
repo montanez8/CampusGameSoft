@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameSoft</title>
+<!--    <link rel="stylesheet" href="assets/css/normalize.css">-->
+    <!-- <link rel="stylesheet" href="assets/css/loader.css"> -->
+    <link rel="stylesheet" href="css/app.css">
+    
+    <!-- FontAwensome  -->
+    <link rel="stylesheet" href="assets/fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/brands.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/solid.css">
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+<!--<div class="loader">-->
+<!--    <div class="loader-text">-->
+<!--        <span class="char">G</span>-->
+<!--        <span class="char">A</span>-->
+<!--        <span class="char">M</span>-->
+<!--        <span class="char">E</span>-->
+<!--        <span class="char">S</span>-->
+<!--        <span class="char">O</span>-->
+<!--        <span class="char">F</span>-->
+<!--        <span class="char">T</span>-->
+<!--    </div>-->
+<!--    <div class="spinner"></div>-->
+<!--</div>-->
+<header class="ocultar">
+    <section class="header__section">
+        <div class="section-logo">
+            <img src="assets/img/OIG.jpg" alt="logo">
+        </div>
+        <nav class="section-nav">
+            <a href="#" class="nav-juegos">
+                Juegos
+            </a>
+        </nav>
+        <div class="section-user">
+            <a href="#">
+                <i class="fa-solid fa-user user-login" data-bs-toggle="modal" data-bs-target="#registro"></i>
+            </a>
+            <a href="#">
+                <i class="fa-solid fa-users listaClientes"></i>
+            </a>
+            <a href="#" class="carrito" >
+                <i class="fa-solid fa-cart-shopping" data-bs-toggle="modal" data-bs-target="#carrito"></i>
+            </a>
+        </div>
+    </section>
+
+    <section class="header__content">
+        <!-- <div class="content-main">
+                <h2>Games</h2>
+            </div> -->
+    </section>
+</header>
+
+<main class="ocultar">
+    <!--    Gestion de videojuegos-->
+    <div class="main__Games">
+        <div class="container-fluid ">
+            <div class="row">
+                <nav class="col-md-1 d-none d-md-block bg-light sidebar centered-sidebar">
+                    <div class="position-sticky Games-div">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <button class="btn  btn-block btn-formGames">
+                                    <i class="fa-solid fa-gamepad fa-beat fa-xl" style="color: #000000;"></i>
+                                </button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="btn  btn-block btn-listGames">
+                                    <i class="fa-solid fa-list fa-beat fa-2xl"></i>
+                                </button>
+                            </li>
+                            <!--                        <li class="nav-item">-->
+                            <!--                            <button class="btn  btn-block">Botón 3</button>-->
+                            <!--                        </li>-->
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Formulario para crear videojuego -->
+        <div class="main-form none">
+            <div class="container d-flex justify-content-center " style="height: 100vh;">
+                <div class="container">
+                    <h2 class="mt-5">Crear Videojuego</h2>
+                    <form id="videojuegoForm" class="mt-4">
+                        <div class="form-group">
+                            <label for="nombre">Nombre del Videojuego:</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tematica">Temática:</label>
+                            <select class="form-control" id="tematica" name="tematica">
+                                <option value="Aventura">Aventura</option>
+                                <option value="Ciencia Ficción">Ciencia Ficción</option>
+                                <option value="Fantasía">Fantasía</option>
+                                <option value="Terror">Terror</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="valorLicencia">Valor de la Licencia:</label>
+                            <input type="number" class="form-control" id="valorLicencia" name="valorLicencia" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="puntosFidelizacion">Puntos para Fidelización:</label>
+                            <input type="number" class="form-control" id="puntosFidelizacion" name="puntosFidelizacion"
+                                required>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary m-2 ">Crear Videojuego</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- mostrar los videojuegos -->
+        <div id="contenedorVideojuegos" class="container none">
+            <!-- Aquí se mostrarán los videojuegos -->
+        </div>
+
+    </div>
+
+
+
+
+    <!--Lista de Usuario , Clientes Registrados-->
+    <div class="lista-clientes">
+        <table id="lista-clientes" class="table table-striped table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">Número de identificación</th>
+                    <th scope="col">Nombres</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">Teléfono</th>
+                    <th scope="col">Enail</th>
+                    <th scope="col">Fecha de nacimiento</th>
+                    <th scope="col">Nacionalidad</th>
+                    <th scope="col">Eliminar</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+            </table>
+            </div>
+
+</main>
+
+
+<!--Modal de registro-->
+<!-- Modal 2 -->
+<div class="modal fade" id="registro" tabindex="-1" aria-labelledby="modalLabel2" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabel2">Registro de clientes</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="formularioRegistar">
+                    <div class="mb-3">
+                        <label for="identificacion" class="form-label">Número de Identificación</label>
+                        <input type="text" class="form-control" id="identificacion"
+                            placeholder="Tu número de identificación" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nombres" class="form-label">Nombres</label>
+                        <input type="text" class="form-control" id="nombres" placeholder="Tus nombres" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="apellidos" class="form-label">Apellidos</label>
+                        <input type="text" class="form-control" id="apellidos" placeholder="Tus apellidos" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="telefono" class="form-label">Teléfono</label>
+                        <input type="tel" class="form-control" id="telefono" placeholder="Tu número de teléfono"
+                            required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="register" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="register" placeholder="Tu correo electrónico"
+                            required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+                        <input type="date" class="form-control" id="fechaNacimiento" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nacionalidad" class="form-label">Nacionalidad</label>
+                        <input type="text" class="form-control" id="nacionalidad" placeholder="Tu nacionalidad"
+                            required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-registrar">Registrarse</button>
+                </form>
+
+            </div>
+            <div class="modal-footer">
+            </div>
+            </div>
+            </div>
+            </div>
+
+
+            <!-- modal carrito -->
+        <div class="modal fade" id="carrito" tabindex="-1" aria-labelledby="modalLabel2" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalLabel">Compra</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="selectContainer">
+                            <select id="videojuegosSelect">
+                                <option value="">Seleccione un videoJuego</option>
+                            </select>
+                            <select id="usuariosSelect">
+                                <option value="">Seleccione un cliente</option>
+                            </select>
+                        </div>
+
+                
+        
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+<!--Foooter-->
+
+<script type="module" src="Js/app.js"></script>
+
+<!--Bootstrap-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@2.11.6/dist/umd/popper.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
