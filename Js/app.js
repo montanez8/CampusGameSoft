@@ -34,14 +34,14 @@ console.log(clientes);
 
 
 
-// window.addEventListener('load', () => {
+window.addEventListener('load', () => {
 
-//     setTimeout(() => {
-//         loader.style.opacity = 0;
-//         loader.style.display = 'none';
-//         ocultar.classList.remove('ocultar');
-//     }, 3000);
-// });
+    setTimeout(() => {
+        loader.style.opacity = 0;
+        loader.style.display = 'none';
+        ocultar.classList.remove('ocultar');
+    }, 3000);
+});
 
 login.addEventListener('click',(e)=>{
     console.log('Login');

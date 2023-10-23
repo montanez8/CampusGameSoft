@@ -97,8 +97,7 @@ function mostrarVideojuegos() {
       <p class="card-text">Puntos para Fidelización: ${videojuego.puntosFidelizacion}</p>
 <!--      btn eliminar videojuego-->
         <a href="#" class="btn btn-danger btn-block eliminar-videojuego" data-id="${videojuego.id}">Eliminar</a>
-<!--        btn enviar a lista de deseos-->
-        <a href="#" class="btn btn-primary btn-block">Lista de Deseos</a>
+ 
 <!--        btn enviar al carrito-->
         <a href="#" class="btn btn-primary btn-block">Agregar al carrito</a>
       
